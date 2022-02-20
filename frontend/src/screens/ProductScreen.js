@@ -12,8 +12,9 @@ const ProductScreen = ({ match }) => {
         const url = `/api/products/${id}`
         axios.get(url).then((d) => {
             setProduct(d.data)
+            console.log(d.data)
         })
-    })
+    }, [])
     return (
         <div>
             <Button as={Link} to='/' variant='light' style={{ margin: '5px' }}>

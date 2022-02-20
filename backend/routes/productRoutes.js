@@ -15,7 +15,7 @@ productRouter.get('/', async (req, res) => {
 productRouter.get('/:id', async (req, res) => {
     try {
         const product = await Product.find({ _id: req.params.id })
-        res.json(product)
+        res.json(product[0])
     } catch (err) {
         res.json(err.message)
     }

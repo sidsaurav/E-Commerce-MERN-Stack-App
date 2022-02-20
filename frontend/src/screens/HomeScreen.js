@@ -13,7 +13,7 @@ const HomeScreen = () => {
             setProducts(d.data)
         })
         console.log('hello')
-    })
+    }, [])
     return (
         <>
             <h1>Latest Products</h1>
