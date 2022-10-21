@@ -11,6 +11,8 @@ import ShippingScreen from './screens/ShippingScreen'
 import PaymentScreen from './screens/PaymentScreen'
 import PlaceOrderScreen from './screens/PlaceOrderScreen'
 import OrderScreen from './screens/OrderScreen'
+import UserListScreen from './screens/UserListScreen'
+import UserEditScreen from './screens/UserEditScreen'
 import './bootstrap.min.css'
 import { Container } from 'react-bootstrap'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
@@ -32,6 +34,14 @@ const App = () => {
                         <Route path='/login' component={LoginScreen} />
                         <Route path='/register' component={RegisterScreen} />
                         <Route path='/profile' component={ProfileScreen} />
+                        <Route
+                            path='/admin/userlist'
+                            component={UserListScreen}
+                        />
+                        <Route
+                            path='/admin/user/:id/edit'
+                            component={UserEditScreen}
+                        />
                         <Route path='/products/:id' component={ProductScreen} />
                         <Route path='/cart/:id?' component={CartScreen} />
                         <Route path='/' component={HomeScreen} exact />
